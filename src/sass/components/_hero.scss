@@ -1,0 +1,117 @@
+.hero {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9rem;
+  height: 70vh;
+  padding: 4rem 4rem;
+  position: relative;
+
+  @include responsive(tab-port) {
+    margin-top: 4rem;
+    height: auto;
+  }
+
+  @include responsive(mobile-lg) {
+    padding: 2rem 2rem;
+  }
+
+  .carr {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    position: absolute;
+    left: 4vw;
+    top: 2rem;
+    font-size: 3rem;
+    background: linear-gradient(
+      125deg,
+      rgba(72, 145, 247, 0.631),
+      rgba(0, 128, 122, 0.642)
+    );
+    text-transform: uppercase;
+
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    @media screen and (max-width: 539px) {
+      display: none;
+    }
+  }
+
+  &__info {
+  }
+
+  &__name {
+    font-size: 3rem;
+  }
+
+  &__desc {
+    margin-block-start: 1.7rem;
+    font-size: 1.3rem;
+
+    span {
+      background: linear-gradient(
+        125deg,
+        rgba(72, 145, 247, 0.631),
+        rgba(0, 128, 122, 0.642)
+      );
+      display: inline-block;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    margin-block-start: 5.5rem;
+  }
+
+  &__btn {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    background: #c7811e;
+    color: $clr-white;
+    padding: 0.7rem;
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include responsive(mobile-md) {
+      font-size: 1.2rem;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      background: $clr-primary-1;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      transform: translate3d(4px, 4px, 20px);
+      transition: $transition;
+      border-radius: 4px;
+    }
+
+    &:hover::before {
+      transform: translate(0);
+    }
+  }
+
+  &__avaterbox {
+    filter: drop-shadow(-12px 56px 47px #6c9bbf9f);
+  }
+
+  &__avater {
+    width: 25rem;
+  }
+}

@@ -1,0 +1,15 @@
+.transition {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 30;
+  background: $clr-primary-1;
+
+  &__sub {
+    background: $-bg;
+    z-index: 20;
+  }
+}

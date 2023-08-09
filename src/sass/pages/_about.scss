@@ -1,0 +1,83 @@
+.about {
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+
+  @include responsive(mobile-lg) {
+    padding: 1rem 0rem;
+  }
+
+  &__info {
+    margin: 2rem auto;
+    width: 75%;
+
+    @include responsive(tab-land) {
+      width: 90%;
+    }
+    @include responsive(mobile-lg) {
+      width: 100%;
+    }
+  }
+
+  &__avater {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    justify-content: space-between;
+
+    @include responsive(tab-port) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+
+    &-img {
+      width: 33rem;
+      transform: perspective(1500px) rotateY(15deg);
+      border-radius: 1rem;
+      box-shadow: rgba(61, 163, 218, 0.25) 0px 25px 50px -12px;
+      transition: transform 1s ease 0s;
+      border-radius: 7px;
+      position: relative;
+      opacity: 0.5;
+
+      @include responsive(mobile-lg) {
+        width: 25rem;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: rgb(52, 108, 176);
+        left: 0;
+        top: 0;
+        border-radius: 5px;
+        z-index: -1;
+        transform: matrix(1, -0.04, 0.03, 1, 0, 0);
+        transition: transform 0.3s ease 0s;
+      }
+
+      &:hover::after,
+      &:hover {
+        transform: perspective(3000px) rotateY(5deg);
+        opacity: 0.7;
+      }
+
+      img {
+        object-fit: cover;
+        border-radius: 7px;
+      }
+    }
+  }
+
+  &__description {
+    width: 40vw;
+    font-size: 1.8rem;
+    word-spacing: 2px;
+    color: $clr-primary-1;
+
+    @include responsive(tablet-sm) {
+      width: 25rem;
+    }
+  }
+}

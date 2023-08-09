@@ -1,0 +1,82 @@
+.nav {
+  // justify-content: center;
+  box-shadow: 4px 75px 42px -14px #356275bf;
+  backdrop-filter: blur(5px);
+  @media screen and (max-width: 527px) {
+    display: none !important;
+  }
+
+  &__subnav {
+    display: none;
+
+    @media screen and (max-width: 527px) {
+      display: grid;
+      place-items: center;
+      padding: 1rem 2rem;
+      left: 4rem;
+      position: fixed !important;
+      bottom: 1rem;
+      transform: none;
+      background: #000000e5;
+      backdrop-filter: blur(5px);
+      border-radius: 30px;
+      z-index: 20;
+    }
+
+    @media screen and (max-width: 327px) {
+      left: 1.5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @media screen and (max-width: 527px) {
+      gap: 2rem;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    border: 0.2px solid $clr-primary-1;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: grid;
+    place-items: center;
+
+    @media screen and (max-width: 527px) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__link.active {
+    * {
+      color: $clr-white;
+    }
+    border: 0.2px solid $clr-white;
+  }
+
+  &__icon {
+    font-size: 1.6rem;
+    color: $clr-primary-1;
+  }
+
+  &__tooltip {
+    border: 1px solid $clr-primary-1;
+    font-size: 1.1rem;
+    box-shadow: 0 20px 25px -5px rgba(206, 199, 199, 0.1),
+      0 8px 10px -6px rgba(44, 41, 41, 0.1);
+    transition: all 0.3s;
+    background: #575555;
+
+    @include responsive(tablet) {
+      display: none;
+    }
+  }
+}

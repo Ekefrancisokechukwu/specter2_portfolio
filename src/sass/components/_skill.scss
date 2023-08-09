@@ -1,0 +1,90 @@
+.skill {
+  margin-top: 7rem;
+  padding: 0 1rem;
+
+  &__h2 {
+    text-transform: capitalize;
+    font-size: 2rem;
+  }
+
+  ul {
+    margin-block-start: 2rem;
+    // width: 30rem;
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  li {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    &:nth-child(1) {
+      background: linear-gradient(
+        to right,
+        rgb(162, 99, 31),
+        rgb(183, 105, 27)
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    &:nth-child(2) {
+      background: linear-gradient(
+        to right,
+        rgba(7, 76, 119, 0.792),
+        rgb(15, 164, 181)
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    &:nth-child(3) {
+      background: linear-gradient(
+        to right,
+        rgba(136, 11, 103, 0.792),
+        rgb(92, 21, 51)
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    &:nth-child(4) {
+      background: linear-gradient(
+        to right,
+        rgba(13, 116, 145, 0.792),
+        rgb(12, 60, 105)
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    &:nth-child(5) {
+      background: linear-gradient(
+        to right,
+        rgba(136, 145, 13, 0.792),
+        rgb(212, 202, 20)
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    &:nth-child(6) {
+      background: linear-gradient(
+        to right,
+        rgba(24, 153, 162, 0.792),
+        rgb(21, 124, 128)
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+
+  &__icon {
+    color: $clr-primary-1;
+    font-size: 4rem;
+  }
+}

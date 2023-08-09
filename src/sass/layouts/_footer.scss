@@ -1,0 +1,26 @@
+.footer {
+  margin-top: 5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #a8cddb88, hsla(243, 18%, 60%, 0.37));
+  text-align: center;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    color: $clr-black;
+    font-size: 1.4rem;
+
+    @include responsive(mobile-lg) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.footer-media {
+  margin-top: 2rem;
+  @media screen and (min-width: 340px) {
+    display: none !important;
+  }
+}

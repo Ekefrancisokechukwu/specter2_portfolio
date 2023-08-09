@@ -1,0 +1,124 @@
+.project {
+  padding: 3rem 4rem;
+
+  @include responsive(mobile-md) {
+    padding: 3rem 2rem;
+  }
+
+  &__container {
+    display: block;
+    margin-top: 3rem;
+    width: 87vw;
+    position: relative;
+  }
+
+  &__contents {
+    margin-left: 21rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 3rem;
+    align-items: center;
+    padding: 1rem;
+
+    @include responsive(tab-port-lg) {
+      margin-left: 0;
+    }
+
+    @include responsive(mobile-md) {
+      padding: 0;
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    h1 {
+      font-size: 7rem;
+    }
+  }
+
+  &__filter {
+    width: 20rem;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+
+    @include responsive(tab-port-lg) {
+      display: none;
+    }
+
+    div {
+      // padding: ;
+      text-align: center;
+    }
+
+    &--list {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    &--item {
+      font-size: 1.3rem;
+      margin-block-start: 1rem;
+      border: 1px solid #ffffff4e;
+      padding: 1rem;
+      cursor: pointer;
+      border-radius: 7px;
+      text-transform: capitalize;
+
+      &:hover {
+        background: #ffffff4e;
+        transition: $transition;
+      }
+    }
+
+    &--item.active {
+      background: #ffffff4e;
+    }
+  }
+  &__filter.fixed {
+    position: fixed;
+    top: 15rem;
+    // background: yellow;
+  }
+
+  .sidebarFilter {
+    height: 100vh;
+    background: rgba(4, 4, 55, 0.848);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    padding: 1rem;
+    display: none;
+
+    @include responsive(tab-port-lg) {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+  }
+
+  .sidebarFilter.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .sideFilterBtn {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    background: #ffffff63;
+    padding: 0.3rem;
+    display: inline-block;
+    border-radius: 5px;
+    display: none;
+    margin-bottom: 1rem;
+
+    @include responsive(tab-port-lg) {
+      display: inline-block;
+    }
+  }
+
+  .filterbtn {
+    width: 20rem;
+  }
+}

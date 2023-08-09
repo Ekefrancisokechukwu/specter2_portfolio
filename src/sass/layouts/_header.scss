@@ -1,0 +1,115 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  // gap: 39rem;
+  // box-shadow: 0 25px 50px -12px rgba(62, 178, 189, 0.25);
+
+  @include responsive(tablet) {
+    padding: 2rem 2rem;
+  }
+
+  &__logo {
+    font-family: "Gluten", cursive;
+    font-size: 4.5rem;
+    display: inline-block;
+    color: transparent;
+    background: linear-gradient(130deg, #7c7575d5 3%, #1881ea69);
+    -webkit-background-clip: text;
+
+    @include responsive(tablet) {
+      font-size: 3.4rem;
+    }
+  }
+
+  &__site {
+    position: relative;
+    .notify-icon {
+      font-size: 2rem;
+      color: $clr-primary-1;
+      cursor: pointer;
+      width: 3rem;
+      height: 3rem;
+
+      @include responsive(mobile-md) {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      &:hover {
+        background: $clr-primary-1;
+
+        border-radius: 50%;
+      }
+    }
+
+    .notify {
+      position: absolute;
+      right: 4rem;
+      width: 20rem;
+      padding: 4px;
+      background-color: #504c4c;
+      border-radius: 5px;
+      box-shadow: 0 20px 25px -5px rgba(26, 211, 217, 0.1),
+        0 8px 10px -6px rgba(16, 199, 205, 0.1);
+      z-index: 30;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 85%;
+        margin-left: -5px;
+        border-width: 9px;
+        border-style: solid;
+        border-color: transparent transparent #504c4c transparent;
+        z-index: 2;
+      }
+
+      @media screen and (max-width: 527px) {
+        width: 15rem;
+      }
+
+      h4 {
+        font-size: 1.3rem;
+        @media screen and (max-width: 527px) {
+          font-size: 1.1rem;
+        }
+      }
+
+      ul {
+        margin-top: 0.8rem;
+      }
+
+      li {
+        font-size: 1.1rem;
+        margin-top: 0.4rem;
+      }
+
+      h5 {
+        margin-top: 0.9rem;
+        color: rgba(31, 144, 197, 0.786);
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &__toggle-btn {
+    place-items: center;
+    cursor: pointer;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    text-align: center;
+    transition: $transition;
+    display: none;
+    @media screen and (max-width: 527px) {
+      display: grid;
+    }
+
+    &:hover {
+      background: #ffffff27;
+    }
+  }
+}

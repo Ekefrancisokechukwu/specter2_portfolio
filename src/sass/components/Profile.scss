@@ -1,0 +1,59 @@
+.profile {
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  background: $clr-black;
+  padding: 0.4rem;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 6px;
+  transform: translate(-100%);
+  transition: $transition;
+  box-shadow: -1px -1px 24px -3px rgba(0, 0, 0, 0.75);
+  border: 1px solid #cccccc1f;
+  z-index: 10;
+
+  &__pic {
+    padding: 0.5rem;
+    border-bottom: 1px solid #cccccc1f;
+    display: grid;
+    place-content: center;
+
+    img {
+      width: 9rem;
+      height: 9rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    background: #000;
+    border-radius: 6px;
+    right: -3rem;
+    width: 5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: 1.6rem;
+    z-index: -2;
+  }
+
+  &__email {
+    // margin-block-start: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.5rem;
+
+    a {
+      font-size: 0.8rem;
+      color: $clr-primary-1;
+    }
+  }
+}
+
+.profile.visible {
+  transform: translate(0);
+}
